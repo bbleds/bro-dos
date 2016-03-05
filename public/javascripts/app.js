@@ -9,5 +9,9 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
       .state("default", {
         url: '/',
         templateUrl : "html-partials/welcome.html"
+      })
+      .state("management", {
+        url: '/management',
+        templateUrl : "html-partials/management.html"
       });
 });
