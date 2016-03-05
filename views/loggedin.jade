@@ -1,5 +1,9 @@
 extends ./header.jade
 
 block content
-
-  div hey bruh
+    <div ui-view></div>
+    
+    //- angular links
+    script(src="/lib/angular/angular.min.js")
+    script(src="/lib/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="/javascripts/app.js")

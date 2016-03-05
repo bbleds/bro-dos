@@ -2,6 +2,7 @@
 
 // --------------- Dependencies
 const express = require("express");
+const path = require("path");
 
 
 // envrionment variables
@@ -13,6 +14,9 @@ const app = express();
 
 // set template engine to jade
 app.set("view engine", "jade");
+
+//use public directory for static files
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 //----------------  Routes
