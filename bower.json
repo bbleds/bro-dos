@@ -1,0 +1,24 @@
+{
+  "name": "bro-dos",
+  "description": "A simple MEAN task assigning app",
+  "main": "server.js",
+  "authors": [
+    "Benjamin Bledsoe <bledsoedesigns@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/bbleds/bro-dos",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.0.8",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "^3.3.6"
+  }
+}

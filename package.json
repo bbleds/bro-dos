@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "bower": "bower"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/bbleds/bro-dos#readme",
   "dependencies": {
+    "bower": "^1.7.7",
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "path": "^0.12.7"

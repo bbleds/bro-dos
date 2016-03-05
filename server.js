@@ -15,10 +15,17 @@ const app = express();
 app.set("view engine", "jade");
 
 
-// routes
+//----------------  Routes
+// index route
 app.get("/", (req, res) => {
   res.render("index");
 });
+
+// logged in route
+app.get("/loggedin", (req, res) => {
+  res.render("loggedin");
+});
+
 
 // init app
 app.listen(PORT, () => {
