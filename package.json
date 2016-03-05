@@ -1,0 +1,29 @@
+{
+  "name": "bro-dos",
+  "version": "1.0.0",
+  "description": "A simple MEAN task assigning app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbleds/bro-dos.git"
+  },
+  "keywords": [],
+  "author": "Benjamin Bledsoe <bledsoedesigns@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbleds/bro-dos/issues"
+  },
+  "homepage": "https://github.com/bbleds/bro-dos#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.9.1"
+  }
+}
