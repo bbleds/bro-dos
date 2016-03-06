@@ -1,8 +1,15 @@
 "use strict";
 
-app.controller("welcomeCtrl", function() {
+app.controller("welcomeCtrl", ["$http", function($http) {
   const self = this;
 
-  self.username = "Ben";
 
-});
+
+  $http.get("/api/userdata")
+  .then((userData) => {
+      self.username = userData.data[0].username;
+  });
+
+
+
+}]);

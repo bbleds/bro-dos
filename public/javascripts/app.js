@@ -14,4 +14,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
         url: '/management',
         templateUrl : "html-partials/management.html"
       });
+
+      // if user navigates to route we havent specified, redirect to default state
+      $urlRouterProvider.otherwise("/");
 });
