@@ -33,6 +33,7 @@ app.get("/loggedin", (req, res) => {
 
 // --- Api Routes
 app.get("/api/userdata", apiCtrl.getUserData);
+app.post("/api/userdata/addmember/:memberName", apiCtrl.addNewMember);
 
 
 // connect to mongodb

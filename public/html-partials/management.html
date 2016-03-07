@@ -1,1 +1,4 @@
-<h1>manage that junk</h1>
+<div ng-controller="managementCtrl as management">
+  <input class="form-input" name="member" placeholder="New Member Here" ng-model="management.memberInput" />
+  <button class="btn btn-primary" ng-click="management.saveMember(management.memberInput)">Add Member</button>
+</div>
