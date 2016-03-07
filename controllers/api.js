@@ -30,12 +30,19 @@ exportObject.addNewMember = (req, res) => {
   // save
   newMember.save((err, savedObject) => {
     if(err) throw err;
-    console.log("successfully saved ->>>>>>>>>>>>>>>>>>>>>>>>>");
-    console.log(savedObject);
-
     res.send({"status":"successful"});
   });
+};
 
+// get members connected with a user
+exportObject.getUserMembers = (req, res) => {
+  // user id is
+  console.log(req.params.userId);
+
+  // query the db for all members matching userId
+  memberModel.find({"belongsTo": `${req.params.userId}`}, (err, membersFound) => {
+    res.send(membersFound);
+  });
 
 };
 

@@ -35,6 +35,9 @@ app.get("/loggedin", (req, res) => {
 app.get("/api/userdata", apiCtrl.getUserData);
 app.post("/api/userdata/addmember/:memberName", apiCtrl.addNewMember);
 
+// --- Get members for a specific user
+app.get("/api/userdata/usermembers/:userId", apiCtrl.getUserMembers);
+
 
 // connect to mongodb
 mongoose.connect(MONGODB_URL, (err) => {
