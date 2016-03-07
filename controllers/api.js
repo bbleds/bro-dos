@@ -46,5 +46,29 @@ exportObject.getUserMembers = (req, res) => {
 
 };
 
+// add a task to a members
+exportObject.addMemberTask = (req, res) => {
+    console.log("->>>>>>>>>>>>>>>>>>>>>>>>>>> params ");
+    console.log(req.params);
+
+    // find member in database,
+    // push task into tasks array
+        // the conditions to be met in our database query
+        const conditions = {
+          "memberName": `${req.params.selectedMember}`,
+          "belongsTo": "56db46774637024aa18aa517"
+        };
+        // the operation to be executed when conditions are met
+        const updateOperation = {$push: {"tasks": {"taskName": `${req.params.task}`}}};
+
+    // run update query
+    memberModel.update(conditions, updateOperation, (err, result) => {
+      console.log(result);
+      res.send({"status":"successful"});
+    });
+
+
+};
+
 
 module.exports = exportObject;

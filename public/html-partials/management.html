@@ -4,9 +4,18 @@
   <div class="row">
     <!-- input to add New member to database -->
     <div class="col-md-6">
+      <h1>Add New Member</h1>
       <input class="form-input" name="member" placeholder="New Member Here" ng-model="management.memberInput" />
       <button class="btn btn-primary" ng-click="management.saveMember(management.memberInput)">Add Member</button>
+    <!-- add tasks to a member  -->
+      <h1>Add Tasks to Members</h1>
+      <select class="form-input" ng-model="management.userSelected">
+          <option ng-repeat="member in management.userMembers">{{member.memberName}}</option>
+      </select>
+      <input class="form-input" name="member" placeholder="New Task Name" ng-model="management.taskInput" />
+      <button class="btn btn-primary" ng-click="management.addTask(management.userSelected, management.taskInput)">Add Task</button>
     </div>
+
     <!-- output members connected with user in db -->
     <div class="col-md-6">
       <div ng-repeat="member in management.userMembers">

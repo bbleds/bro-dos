@@ -38,6 +38,9 @@ app.post("/api/userdata/addmember/:memberName", apiCtrl.addNewMember);
 // --- Get members for a specific user
 app.get("/api/userdata/usermembers/:userId", apiCtrl.getUserMembers);
 
+// --- add task to member
+app.post("/api/userdata/addtask/:selectedMember/:task", apiCtrl.addMemberTask)
+
 
 // connect to mongodb
 mongoose.connect(MONGODB_URL, (err) => {
